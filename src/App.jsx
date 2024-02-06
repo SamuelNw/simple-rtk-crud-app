@@ -22,8 +22,8 @@ function App() {
 					minHeight: "100vh",
 					display: "flex",
 					justifyContent: "center",
-					alignItems: "center",
 					backgroundColor: "#f2f1f0",
+					p: 4,
 				}}
 			>
 				<BrowserRouter>
