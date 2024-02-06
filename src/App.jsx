@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { Grid, CssBaseline } from "@mui/material";
+import Create from "./components/Create";
 
 const theme = createTheme({
 	typography: {
@@ -29,6 +30,10 @@ function App() {
 						<Route
 							path="/"
 							element={<Home />}
+						/>
+						<Route
+							path="/create"
+							element={<Create />}
 						/>
 					</Routes>
 				</BrowserRouter>

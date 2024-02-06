@@ -13,6 +13,7 @@ import {
 } from "@mui/material";
 
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 export default function Home() {
 	const users = useSelector((state) => state.users);
@@ -23,9 +24,14 @@ export default function Home() {
 				<Typography variant="h4" sx={{ pb: 2 }}>
 					User Management with React and Redux
 				</Typography>
-				<Button variant="contained" color="success">
-					Create User
-				</Button>
+				<Link to="/create">
+					<Button
+						variant="contained"
+						color="success"
+					>
+						Create User
+					</Button>
+				</Link>
 			</Box>
 
 			<TableContainer component={Paper}>
