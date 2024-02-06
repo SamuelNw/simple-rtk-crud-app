@@ -12,11 +12,22 @@ import {
 	TableCell,
 } from "@mui/material";
 
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import { deleteUser } from "../redux/reducers/userReducer";
 
 export default function Home() {
 	const users = useSelector((state) => state.users);
+
+	const dispatch = useDispatch();
+
+	function handleClick(id) {
+		dispatch(
+			deleteUser({
+				id: id,
+			}),
+		);
+	}
 
 	return (
 		<Grid>
@@ -90,6 +101,11 @@ export default function Home() {
 										variant="contained"
 										color="error"
 										size="small"
+										onClick={() =>
+											handleClick(
+												user.id,
+											)
+										}
 									>
 										Delete
 									</Button>
