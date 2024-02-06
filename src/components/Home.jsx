@@ -72,16 +72,20 @@ export default function Home() {
 									}
 								</TableCell>
 								<TableCell align="right">
-									<Button
-										variant="contained"
-										color="secondary"
-										size="small"
-										sx={{
-											mx: 2,
-										}}
+									<Link
+										to={`/update/${user.id}`}
 									>
-										Edit
-									</Button>
+										<Button
+											variant="contained"
+											color="secondary"
+											size="small"
+											sx={{
+												mx: 2,
+											}}
+										>
+											Edit
+										</Button>
+									</Link>
 									<Button
 										variant="contained"
 										color="error"

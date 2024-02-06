@@ -3,6 +3,7 @@ import Home from "./components/Home";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { Grid, CssBaseline } from "@mui/material";
 import Create from "./components/Create";
+import Update from "./components/Update";
 
 const theme = createTheme({
 	typography: {
@@ -34,6 +35,10 @@ function App() {
 						<Route
 							path="/create"
 							element={<Create />}
+						/>
+						<Route
+							path="/update/:id"
+							element={<Update />}
 						/>
 					</Routes>
 				</BrowserRouter>
