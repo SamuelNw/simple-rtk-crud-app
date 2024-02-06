@@ -1,8 +1,5 @@
-import {Grid} from "@mui/material";
+import { Grid } from "@mui/material";
 
-
-export default function Home () {
-    return (<Grid>
-        Home
-    </Grid>);
+export default function Home() {
+	return <Grid>Home</Grid>;
 }
