@@ -5,10 +5,11 @@ const userSlice = createSlice({
 	name: "users",
 	initialState: users,
 	reducers: {
-		addUsers: (state, action) => {
+		addUser: (state, action) => {
 			state.push(action.payload);
 		},
 	},
 });
 
+export const { addUser } = userSlice.actions;
 export default userSlice.reducer;
